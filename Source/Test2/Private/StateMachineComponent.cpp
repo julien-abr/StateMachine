@@ -46,7 +46,7 @@ void UStateMachineComponent::InitializeState(EState State)
 		case EState::INIT:
 			{
 				Init* init = new Init(this);
-				CurrentState = init;
+				//CurrentState = MakeUnique<Init>();
 				CurrentState->Begin();	
 			}
 			break;

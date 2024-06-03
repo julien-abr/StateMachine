@@ -22,8 +22,8 @@ UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class TEST2_API UStateMachineComponent : public UActorComponent
 {
 	GENERATED_BODY()
-
-	TObjectPtr<State> CurrentState = nullptr;
+	
+	TUniquePtr<State> CurrentState = nullptr;
 
 	UPROPERTY(EditAnywhere)
 	EState DefaultState;
